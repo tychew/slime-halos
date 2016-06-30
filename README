@@ -1,0 +1,12 @@
+
+TODOs
+
+Remove the patch to slime-menu-choices-for-presentation perhaps by
+adding menu options to the Lisp side only? Will this cost us a new RPC
+message?
+
+Other dirty patches:
+
+present-repl-results
+dispatch-event
+
