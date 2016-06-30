@@ -1,11 +1,23 @@
 
+This project is incomplete. It is an attempt at turning Slime's presentations into something similar to Smalltalk's halos. It is a proof of concepts, just a test. Please send your bug reports and other patches, thanks!
+
 TODOs
 
-Remove the patch to slime-menu-choices-for-presentation perhaps by
+* Can't figure how to load this contrib thing. Putting it into my (slime-setup '(slime-fancy slime-indentation slime-halos)) fails. For now, leave it out, and load swank-halos.lisp then slime-halos.el manually.
+
+* Halos don't work in the REPL anymore.
+
+* Personal TODO - set up keybinding once auto setup works
+
+(define-key slime-mode-map (kbd "C-j") 'slime-eval-present-last-expression)
+(add-hook 'lisp-mode-hook (lambda () (interactive) (define-key slime-mode-map (kbd "C-j") 'slime-eval-present-last-expression)))
+
+
+* Remove the patch to slime-menu-choices-for-presentation perhaps by
 adding menu options to the Lisp side only? Will this cost us a new RPC
 message?
 
-Other dirty patches:
+* Remove other dirty patches:
 
 present-repl-results
 dispatch-event
